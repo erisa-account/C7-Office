@@ -40,25 +40,25 @@
 <nav class="px-6 py-5">
   <div class="max-w-7xl mx-auto flex items-center justify-between gap-6">
     <!-- Logo -->
-    <a href="#" class="flex items-center gap-3 text-3xl font-extrabold" style="color:var(--cyan); font-family:'Nunito',sans-serif;">
-      <i class="fa-solid fa-user-tie text-2xl" style="color:var(--cyan);"></i> C7 Office
+    <a href="#hero" class="logo-link flex items-center gap-3 text-3xl font-extrabold min-w-0 flex-shrink" style="color:var(--cyan); font-family:'Nunito',sans-serif;">
+      <i class="fa-solid fa-user-tie text-2xl" style="color:var(--cyan);"></i> C7 Integrated Communcation Systems
     </a>
 
     <!-- Desktop Nav -->
     <div class="hidden lg:flex items-center gap-7 ml-auto">
-      <a href="#hero" class="nav-link active dropdown flex items-center gap-1">Home <i class="fa fa-chevron-down text-xs"></i>
-        <div class="dropdown-menu"><a href="#">Home 1</a><a href="#">Home 2</a></div>
+      <a href="#hero" class="nav-link active flex items-center gap-1">Home <!--<i class="fa fa-chevron-down text-xs"></i>-->
+        <div class="dropdown-menu hidden "><a href="#">Home 1</a><a href="#">Home 2</a></div>
       </a>
-      <a href="#about" class="nav-link dropdown flex items-center gap-1">About <i class="fa fa-chevron-down text-xs"></i>
-        <div class="dropdown-menu"><a href="#">Our Story</a><a href="#">Team</a></div>
+      <a href="#about" class="nav-link dropdown flex items-center gap-1">About <!--<i class="fa fa-chevron-down text-xs"></i>-->
+        <div class="dropdown-menu hidden"><a href="#">Our Story</a><a href="#">Team</a></div>
       </a>
-      <a href="#services" class="nav-link dropdown flex items-center gap-1">Service <i class="fa fa-chevron-down text-xs"></i>
-        <div class="dropdown-menu"><a href="#">Web Design</a><a href="#">Development</a></div>
+      <a href="#services" class="nav-link dropdown flex items-center gap-1">Service <!--<i class="fa fa-chevron-down text-xs"></i>-->
+        <div class="dropdown-menu hidden"><a href="#">Web Design</a><a href="#">Development</a></div>
       </a>
-      <a href="#why" class="nav-link dropdown flex items-center gap-1">Pages <i class="fa fa-chevron-down text-xs"></i>
+      <a href="#why" class="nav-link hidden dropdown flex items-center gap-1">Pages <!--<i class="fa fa-chevron-down text-xs"></i>-->
         <div class="dropdown-menu"><a href="#">Portfolio</a><a href="#">Blog</a></div>
       </a>
-      <a href="#why" class="nav-link">Elements</a>
+      <a href="#why" class="nav-link hidden">Elements</a>
       <a href="#footer" class="nav-link">Contact</a>
       <button class="text-gray-500 hover:text-cyan-500 transition"><i class="fa fa-magnifying-glass"></i></button>
     </div>
@@ -158,11 +158,11 @@
   </span>
 </div>
       <p class="text-gray-500 leading-relaxed mb-6 fade-up delay-2 " id="about-paragraph">
-        C7 Office is a small but passionate team of web developers dedicated to building modern websites and web applications. 
+        C7 Integrated Communcation Systems is a small but passionate team of web developers dedicated to building modern websites and web applications. 
         With a team of six developers, we focus on creating clean, efficient, and scalable digital solutions
          that help businesses grow and improve their online presence.
       </p>
-      <div class="about-checks grid grid-cols-2 gap-y-3 mb-6">
+      <div class="about-checks grid grid-cols-1 sm:grid-cols-2 gap-y-3 mb-6">
         <div class="flex items-center gap-2 font-semibold  text-gray-700 slide-diagonal"><i class="fa fa-check" style="color:var(--cyan);"></i> 10+ Technologies Used</div>
         <div class="flex items-center gap-2 font-semibold text-gray-700 slide-diagonal diagonal-delay-1"><i class="fa fa-check" style="color:var(--cyan);"></i> 24/7 Support</div>
         <div class="flex items-center gap-2 font-semibold  text-gray-700 slide-diagonal"><i class="fa fa-check" style="color:var(--cyan);"></i> Professional Staff</div>
@@ -172,7 +172,7 @@
         <div class="phone-icon"><i class="fa fa-phone"></i></div>
         <div>
           <p class="text-black text-xl">Call to ask any question</p>
-          <a href="tel:+0123456789" class="text-2xl font-semibold" style="color:var(--cyan);">+012 345 6789</a>
+          <a href="tel:+0123456789" class="text-2xl font-semibold" style="color:var(--cyan);">+355 069 44 87 722</a>
         </div>
       </div>
       <div class="zoomIn">
@@ -181,7 +181,7 @@
     </div>
     <!-- Image -->
     <div>
-      <img class="about-img" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=700&q=80" alt="IT Professional"/>
+      <img class="about-img" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80" alt="IT Professional"/>
     </div>
   </div>
 </section>
@@ -189,9 +189,9 @@
 <!-- ====== SERVICES ====== -->
 <section id="services" class="py-20 px-6" style="background:#f8fbff;">
   <div class="max-w-7xl mx-auto text-center mb-14">
-    <p class="font-extrabold tracking-widest mb-2 text-2xl" style="color:var(--cyan);">OUR SERVICES</p>
-    <h2 class="text-3xl md:text-4xl font-extrabold" style="color:var(--navy);">We Provide Excellent IT Services</h2>
-    <div class="section-divider section-divider--center mb-6">
+    <p class="fade-up font-extrabold tracking-widest mb-2 text-2xl" style="color:var(--cyan);">OUR SERVICES</p>
+    <h2 class="fade-up text-3xl md:text-4xl font-extrabold" style="color:var(--navy);">We Provide Excellent IT Services</h2>
+    <div class="fade-up section-divider section-divider--center mb-6">
   <span class="bar-long">
     <span class="bar-square"></span>
   </span>
@@ -199,35 +199,36 @@
   </div>
   <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
     <!-- Card -->
-    <div class="bg-white rounded-xl p-8 shadow hover:shadow-xl transition group hover:-translate-y-1">
+    <div class="service-card card-delay-1 bg-white rounded-xl p-8 shadow hover:shadow-xl  group hover:-translate-y-1">
       <div class="feat-icon mb-5 group-hover:scale-110 transition"><i class="fa fa-wifi"></i></div>
-      <h3 class="text-lg font-extrabold mb-2" style="color:var(--navy);">Cyber Security</h3>
-      <p class="text-gray-500 text-sm leading-relaxed">Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et diam dolor magna.</p>
+      <h3 class="text-lg font-extrabold mb-2" style="color:var(--navy);">Custom Web Development</h3>
+      <p class="text-gray-500 text-sm leading-relaxed">Building websites tailored to client needs (landing pages, e-commerce, dashboards)</p>
     </div>
-    <div class="bg-white rounded-xl p-8 shadow hover:shadow-xl transition group hover:-translate-y-1">
+    <div class="service-card card-delay-2 bg-white rounded-xl p-8 shadow hover:shadow-xl  group hover:-translate-y-1">
       <div class="feat-icon mb-5 group-hover:scale-110 transition"><i class="fa fa-code"></i></div>
-      <h3 class="text-lg font-extrabold mb-2" style="color:var(--navy);">Web Development</h3>
-      <p class="text-gray-500 text-sm leading-relaxed">Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et diam dolor magna.</p>
+      <h3 class="text-lg font-extrabold mb-2" style="color:var(--navy);">Frontend Development</h3>
+      <p class="text-gray-500 text-sm leading-relaxed">Creating responsive and interactive user interfaces using Angular, JavaScript, and Tailwind CSS for a seamless user experience across devices.</p>
     </div>
-    <div class="bg-white rounded-xl p-8 shadow hover:shadow-xl transition group hover:-translate-y-1">
+    <div class="service-card card-delay-3 bg-white rounded-xl p-8 shadow hover:shadow-xl  group hover:-translate-y-1">
       <div class="feat-icon mb-5 group-hover:scale-110 transition"><i class="fa fa-mobile-screen"></i></div>
-      <h3 class="text-lg font-extrabold mb-2" style="color:var(--navy);">App Development</h3>
-      <p class="text-gray-500 text-sm leading-relaxed">Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et diam dolor magna.</p>
+      <h3 class="text-lg font-extrabold mb-2" style="color:var(--navy);">Backend Development & APIs</h3>
+      <p class="text-gray-500 text-sm leading-relaxed">Building robust server-side applications with PHP (Laravel), Node.js, and .NET — including APIs, databases, and business logic</p>
     </div>
-    <div class="bg-white rounded-xl p-8 shadow hover:shadow-xl transition group hover:-translate-y-1">
+    <div class="service-card card-delay-4 bg-white rounded-xl p-8 shadow hover:shadow-xl group hover:-translate-y-1">
       <div class="feat-icon mb-5 group-hover:scale-110 transition"><i class="fa fa-database"></i></div>
-      <h3 class="text-lg font-extrabold mb-2" style="color:var(--navy);">Data Analytics</h3>
-      <p class="text-gray-500 text-sm leading-relaxed">Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et diam dolor magna.</p>
+      <h3 class="text-lg font-extrabold mb-2" style="color:var(--navy);">Full-Stack Web Applications</h3>
+      <p class="text-gray-500 text-sm leading-relaxed">End-to-end web development combining Angular, Tailwind CSS, Laravel, Node.js, and .NET to deliver complete projects from design to deployment</p>
     </div>
-    <div class="bg-white rounded-xl p-8 shadow hover:shadow-xl transition group hover:-translate-y-1">
+    <div class="service-card card-delay-5 bg-white rounded-xl p-8 shadow hover:shadow-xl  group hover:-translate-y-1">
       <div class="feat-icon mb-5 group-hover:scale-110 transition"><i class="fa fa-cloud"></i></div>
-      <h3 class="text-lg font-extrabold mb-2" style="color:var(--navy);">Cloud Services</h3>
-      <p class="text-gray-500 text-sm leading-relaxed">Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et diam dolor magna.</p>
+      <h3 class="text-lg font-extrabold mb-2" style="color:var(--navy);">Web Maintenance & Support</h3>
+      <p class="text-gray-500 text-sm leading-relaxed">We ensure your websites run smoothly with regular updates, bug fixes, and performance optimization.
+Our team provides security monitoring, backups to keep your web projects fast, secure, and reliable.</p>
     </div>
-    <div class="bg-white rounded-xl p-8 shadow hover:shadow-xl transition group hover:-translate-y-1">
+    <div class="service-card card-delay-6 bg-white rounded-xl p-8 shadow hover:shadow-xl group hover:-translate-y-1">
       <div class="feat-icon mb-5 group-hover:scale-110 transition"><i class="fa fa-headset"></i></div>
-      <h3 class="text-lg font-extrabold mb-2" style="color:var(--navy);">IT Consulting</h3>
-      <p class="text-gray-500 text-sm leading-relaxed">Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et diam dolor magna.</p>
+      <h3 class="text-lg font-extrabold mb-2" style="color:var(--navy);">Cloud Integration / Hosting Support</h3>
+      <p class="text-gray-500 text-sm leading-relaxed">Deploy projects to cloud platforms, setup hosting</p>
     </div>
   </div>
 </section>
@@ -236,10 +237,10 @@
   <div class="max-w-7xl mx-auto px-6 text-center">
 
     <!-- Label -->
-    <p class="wp-label">Work Process</p>
+    <p class="wp-label fade-up">Work Process</p>
 
     <!-- Heading -->
-    <h2 class="wp-heading">
+    <h2 class="wp-heading fade-up">
       Step By Step Simple &amp; Clean<br>Working Process
     </h2>
 
@@ -257,8 +258,8 @@
         <div class="wp-icon">
           <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
         </div>
-        <p class="wp-title">Research</p>
-        <p class="wp-desc">Eos vero dolore eirmod diam duo lorem magna sit sea dolore sanctus sed et</p>
+        <p class="wp-title">Discovery & Planning</p>
+        <p class="wp-desc">We start by understanding client requirements, goals, and project scope to create a clear development plan.</p>
       </div>
 
       <!-- Arrow 1 (draggable) -->
@@ -279,8 +280,8 @@
             <path d="M6 13h5v4H6zm7-6h3v3h-3zm0 5h3v3h-3zM6 7h5v4H6z"/>
           </svg>
         </div>
-        <p class="wp-title">Concept</p>
-        <p class="wp-desc">Eos vero dolore eirmod diam duo lorem magna sit sea dolore sanctus sed et</p>
+        <p class="wp-title">Design & Concept</p>
+        <p class="wp-desc">Our team designs user-friendly interfaces and defines the structure and technologies to be used.</p>
       </div>
 
       <!-- Arrow 2 (draggable) -->
@@ -298,7 +299,7 @@
           <svg viewBox="0 0 24 24"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
         </div>
         <p class="wp-title">Development</p>
-        <p class="wp-desc">Eos vero dolore eirmod diam duo lorem magna sit sea dolore sanctus sed et</p>
+        <p class="wp-desc">We build the application using modern technologies ensuring quality and performance.</p>
       </div>
 
       <!-- Arrow 3 (draggable) -->
@@ -315,8 +316,8 @@
         <div class="wp-icon">
           <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
         </div>
-        <p class="wp-title">Finalization</p>
-        <p class="wp-desc">Eos vero dolore eirmod diam duo lorem magna sit sea dolore sanctus sed et</p>
+        <p class="wp-title">Testing & Launch</p>
+        <p class="wp-desc">We test functionality, fix issues, and deploy the project, ensuring a smooth and reliable launch.</p>
       </div>
 
     </div><!-- /wp-steps -->
@@ -330,7 +331,7 @@
 <section id="why" class="py-20 px-6 bg-white">
   <div class="max-w-7xl mx-auto">
     <div class="text-center mb-12">
-      <p class="font-extrabold tracking-widest text-sm mb-2" style="color:var(--cyan);">WHY CHOOSE US</p>
+      <p class="font-extrabold tracking-widest wp-label mb-2" style="color:var(--cyan);">WHY CHOOSE US</p>
       <h2 class="text-3xl md:text-4xl font-extrabold" style="color:var(--navy);">We Are Here to Grow Your<br>Business Exponentially</h2>
       <div class="section-divider section-divider--center mb-6">
   <span class="bar-long">
@@ -342,51 +343,118 @@
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
       <!-- Left -->
       <div class="flex flex-col gap-10">
-        <div class="why-item">
+        <div class="why-item anim-item" data-delay="200">
           <div class="why-icon"><i class="fa fa-handshake text-xl"></i></div>
-          <h4 class="text-lg font-extrabold" style="color:var(--navy);">Best In Industry</h4>
-          <p class="text-gray-500 text-sm">Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et diam dolor</p>
+          <h4 class="text-lg font-extrabold" style="color:var(--navy);">Dedicated Team</h4>
+          <p class="text-gray-500 text-sm">We're a team of developers who give full attention to every project, ensuring quality over quantity.
+</p>
         </div>
-        <div class="why-item">
+        <div class="why-item anim-item" data-delay="400">
           <div class="why-icon"><i class="fa fa-award text-xl"></i></div>
-          <h4 class="text-lg font-extrabold" style="color:var(--navy);">Award Winning</h4>
-          <p class="text-gray-500 text-sm">Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et diam dolor</p>
+          <h4 class="text-lg font-extrabold" style="color:var(--navy);">Modern Technologies</h4>
+          <p class="text-gray-500 text-sm">We use up-to-date tools and frameworks to build fast, responsive, and scalable web applications.
+</p>
         </div>
       </div>
 
       <!-- Center Image -->
       <div class="flex justify-center">
-        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80" alt="Team" class="rounded-xl shadow-2xl w-full max-w-sm object-cover" style="height:360px;"/>
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80" alt="Team" class="rounded-xlshadow-2xl zoomIn w-full max-w-sm object-cover" style="height:360px;"/>
       </div>
 
       <!-- Right -->
       <div class="flex flex-col gap-10">
-        <div class="why-item">
+        <div class="why-item anim-item" data-delay="300">
           <div class="why-icon"><i class="fa-solid fa-users text-xl"></i></div>
-          <h4 class="text-lg font-extrabold" style="color:var(--navy);">Professional Staff</h4>
-          <p class="text-gray-500 text-sm">Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et diam dolor</p>
+          <h4 class="text-lg font-extrabold" style="color:var(--navy);">Fast & Efficient</h4>
+          <p class="text-gray-500 text-sm">We work quickly without compromising quality, delivering clean and reliable solutions on time.
+</p>
         </div>
-        <div class="why-item">
+        <div class="why-item anim-item" data-delay="500">
           <div class="why-icon"><i class="fa fa-phone text-xl"></i></div>
-          <h4 class="text-lg font-extrabold" style="color:var(--navy);">24/7 Support</h4>
-          <p class="text-gray-500 text-sm">Magna sea eos sit dolor, ipsum amet lorem diam dolor eos et diam dolor</p>
+          <h4 class="text-lg font-extrabold" style="color:var(--navy);">Direct Communication</h4>
+          <p class="text-gray-500 text-sm">Work directly with developers—no middle layers, no confusion, just clear and simple collaboration.
+</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<section id="testimonial" class="py-20 px-6 bg-white mb-20">
+<div class="ts-section">
+  <div class="ts-header">
+    <p class=" wp-label">Testimonial</p>
+    <h2 class="ts-title">What Our Clients Say About<br>Our Digital Services</h2>
+    <div class="fade-up section-divider section-divider--center mb-6">
+  <span class="bar-long">
+    <span class="bar-square"></span>
+  </span>
+</div>
+  </div>
+
+  <div class="ts-outer">
+    <div class="ts-viewport" id="tsVp">
+      <div class="ts-track" id="tsTr">
+        <div class="ts-card">
+          <div class="ts-card-head">
+            
+            <div><p class="ts-name">Built Through Direct Collaboration</p><p class="ts-prof"></p></div>
+          </div>
+          <div class="ts-body"><p class="ts-quote">
+           We work closely with clients and involve them directly in every important development decision.</p></div>
+        </div>
+        <div class="ts-card">
+          <div class="ts-card-head">
+            
+            <div><p class="ts-name">Speed Without Losing Quality</p><p class="ts-prof"></p></div>
+          </div>
+          <div class="ts-body"><p class="ts-quote">
+          We maintain fast development cycles while keeping code clean, stable, and maintainable.</p></div>
+        </div>
+        <div class="ts-card">
+          <div class="ts-card-head">
+           
+            <div><p class="ts-name">Adaptive Development Approach</p><p class="ts-prof"></p></div>
+          </div>
+          <div class="ts-body"><p class="ts-quote">
+          We adjust features and structure easily as the project evolves and new needs appear.</p></div>
+        </div>
+        <div class="ts-card">
+          <div class="ts-card-head">
+            
+            <div><p class="ts-name">User-Focused Thinking in Every Feature</p><p class="ts-prof"></p></div>
+          </div>
+          <div class="ts-body"><p class="ts-quote">
+          Every decision is made to improve real user experience, not just technical implementation.</p></div>
+        </div>
+        <div class="ts-card">
+          <div class="ts-card-head">
+            
+            <div><p class="ts-name">Feedback-Driven Development</p><p class="ts-prof"></p></div>
+          </div>
+          <div class="ts-body"><p class="ts-quote">
+         We continuously refine each feature based on client input to ensure the final product matches real expectations.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ts-dots" id="tsDots"></div>
+</div>
+</section>
+    
 <!-- ====== FOOTER ====== -->
 <footer id="footer">
   <div class="grid grid-cols-1 lg:grid-cols-4">
     <!-- Left Brand Panel -->
     <div class="left-col px-10 py-14 text-white">
       <div class="flex items-center gap-2 text-2xl font-extrabold mb-4" style="font-family:'Nunito',sans-serif;">
-        <i class="fa-solid fa-user-tie"></i> Startup
+        <i class="fa-solid fa-user-tie"></i> C7 Integrated Communcation Systems 
       </div>
       <p class="text-sm opacity-90 leading-relaxed mb-6">
-        Lorem diam sit erat dolor elitr et, diam lorem justo amet clita stet eos sit. Elitr dolor duo lorem, elitr clita ipsum sea. Diam amet erat lorem stet eos. Diam amet et kasd eos duo.
-      </p>
+        Have an idea or need a website? Send us your email and we'll get in touch to discuss your project.
+</p>
       <div class="flex gap-2">
         <input type="email" placeholder="Your Email" class="flex-1 px-4 py-3 text-gray-800 text-sm rounded-l-none rounded outline-none"/>
         <button class="px-5 py-3 font-bold text-white text-sm" style="background:var(--navy);">Sign Up</button>
@@ -398,12 +466,18 @@
 
       <!-- Get In Touch -->
       <div>
-        <h5 class="text-white font-extrabold text-lg mb-4">Get In Touch</h5>
-        <div class="w-10 h-0.5 mb-5" style="background:var(--cyan);"></div>
+        <h5 class="text-white font-extrabold text-3xl mb-4">Get In Touch</h5>
+        
+        
+<div class="section-divider mb-5">
+  <span class="bar-long">
+    <span class="bar-square"></span>
+  </span>
+</div>
         <div class="flex flex-col gap-3 text-sm" style="color:#a0b4cc;">
-          <div class="flex items-start gap-3"><i class="fa fa-location-dot mt-0.5" style="color:var(--cyan);"></i><span>123 Street, New York, USA</span></div>
-          <div class="flex items-start gap-3"><i class="fa fa-envelope mt-0.5" style="color:var(--cyan);"></i><span>info@example.com</span></div>
-          <div class="flex items-start gap-3"><i class="fa fa-phone mt-0.5" style="color:var(--cyan);"></i><span>+012 345 67890</span></div>
+          <div class="flex items-start gap-3"><i class="fa fa-location-dot mt-0.5" style="color:var(--cyan);"></i><span>Ndre Mjeda Street, Tirana</span></div>
+          <div class="flex items-start gap-3"><i class="fa fa-envelope mt-0.5" style="color:var(--cyan);"></i><span>info@c7integratedsystems.com</span></div>
+          <div class="flex items-start gap-3"><i class="fa fa-phone mt-0.5" style="color:var(--cyan);"></i><span>+355 069 44 87 722</span></div>
         </div>
         <div class="flex gap-2 mt-5">
           <a href="#" class="w-9 h-9 rounded flex items-center justify-center text-white text-sm transition hover:opacity-80" style="background:var(--cyan);"><i class="fab fa-twitter"></i></a>
@@ -415,28 +489,36 @@
 
       <!-- Quick Links -->
       <div>
-        <h5 class="text-white font-extrabold text-lg mb-4">Quick Links</h5>
-        <div class="w-10 h-0.5 mb-5" style="background:var(--cyan);"></div>
+        <h5 class="text-white font-extrabold text-3xl mb-4">Quick Links</h5>
+        <div class="section-divider mb-5">
+  <span class="bar-long">
+    <span class="bar-square"></span>
+  </span>
+</div>
         <ul class="flex flex-col gap-2 text-sm" style="color:#a0b4cc;">
           <li><a href="#" class="hover:text-white flex items-center gap-2 transition"><i class="fa fa-arrow-right text-xs" style="color:var(--cyan);"></i>Home</a></li>
           <li><a href="#about" class="hover:text-white flex items-center gap-2 transition"><i class="fa fa-arrow-right text-xs" style="color:var(--cyan);"></i>About Us</a></li>
           <li><a href="#services" class="hover:text-white flex items-center gap-2 transition"><i class="fa fa-arrow-right text-xs" style="color:var(--cyan);"></i>Our Services</a></li>
-          <li><a href="#" class="hover:text-white flex items-center gap-2 transition"><i class="fa fa-arrow-right text-xs" style="color:var(--cyan);"></i>Meet The Team</a></li>
-          <li><a href="#" class="hover:text-white flex items-center gap-2 transition"><i class="fa fa-arrow-right text-xs" style="color:var(--cyan);"></i>Latest Blog</a></li>
+          <li><a href="#" class="hidden hover:text-white flex items-center gap-2 transition"><i class="fa fa-arrow-right text-xs" style="color:var(--cyan);"></i>Testimonial</a></li>
+          <li><a href="#" class="hidden hover:text-white flex items-center gap-2 transition"><i class="fa fa-arrow-right text-xs" style="color:var(--cyan);"></i>Latest Blog</a></li>
           <li><a href="#footer" class="hover:text-white flex items-center gap-2 transition"><i class="fa fa-arrow-right text-xs" style="color:var(--cyan);"></i>Contact Us</a></li>
         </ul>
       </div>
 
       <!-- Popular Links -->
       <div>
-        <h5 class="text-white font-extrabold text-lg mb-4">Popular Links</h5>
-        <div class="w-10 h-0.5 mb-5" style="background:var(--cyan);"></div>
+        <h5 class="text-white font-extrabold text-3xl mb-4">Popular Links</h5>
+        <div class="section-divider mb-5">
+  <span class="bar-long">
+    <span class="bar-square"></span>
+  </span>
+</div>
         <ul class="flex flex-col gap-2 text-sm" style="color:#a0b4cc;">
           <li><a href="#" class="hover:text-white flex items-center gap-2 transition"><i class="fa fa-arrow-right text-xs" style="color:var(--cyan);"></i>Home</a></li>
           <li><a href="#about" class="hover:text-white flex items-center gap-2 transition"><i class="fa fa-arrow-right text-xs" style="color:var(--cyan);"></i>About Us</a></li>
           <li><a href="#services" class="hover:text-white flex items-center gap-2 transition"><i class="fa fa-arrow-right text-xs" style="color:var(--cyan);"></i>Our Services</a></li>
-          <li><a href="#" class="hover:text-white flex items-center gap-2 transition"><i class="fa fa-arrow-right text-xs" style="color:var(--cyan);"></i>Meet The Team</a></li>
-          <li><a href="#" class="hover:text-white flex items-center gap-2 transition"><i class="fa fa-arrow-right text-xs" style="color:var(--cyan);"></i>Latest Blog</a></li>
+          <li><a href="#" class="hover:text-white flex items-center gap-2 transition"><i class="fa fa-arrow-right text-xs" style="color:var(--cyan);"></i>Testimonial</a></li>
+          <li><a href="#" class="hidden hover:text-white flex items-center gap-2 transition"><i class="fa fa-arrow-right text-xs" style="color:var(--cyan);"></i>Latest Blog</a></li>
           <li><a href="#footer" class="hover:text-white flex items-center gap-2 transition"><i class="fa fa-arrow-right text-xs" style="color:var(--cyan);"></i>Contact Us</a></li>
         </ul>
       </div>
@@ -445,7 +527,8 @@
 
   <!-- Copyright -->
   <div class="text-center py-4 text-sm" style="background:var(--navy-light); color:#a0b4cc;">
-    &copy; Your Site Name. All Rights Reserved. Designed by HTML Codex
+    &copy; C7 Integrated Communication Systems.
+     All Rights Reserved. 
   </div>
 </footer>
 
