@@ -5,18 +5,18 @@ C7 Office Website
 
 The C7 Office Website is a responsive web platform built to showcase the company’s services, projects, and team. It serves as a digital presence for C7, allowing potential clients to explore offerings, understand the company’s workflow, and easily get in contact.
 
-##Features
--Responsive design for all devices
--Modern UI/UX
--Company services overview
--Team presentation section
--Contact form / call-to-action
--Fast and optimized performance
+## Features
+- Responsive design for all devices
+- Modern UI/UX
+- Company services overview
+- Team presentation section
+- Contact form / call-to-action
+- Fast and optimized performance
 
-##Technologies used: 
--HTML5
--CSS3 / Tailwind 
--JavaScript
+##  Technologies used: 
+- HTML5
+- CSS3 / Tailwind 
+- JavaScript
 
 The website: 
 <img width="1918" height="868" alt="Screenshot 2026-04-20 141622" src="https://github.com/user-attachments/assets/89a83104-5f45-4048-bd2c-ee5323c5f6ce" />
