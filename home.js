@@ -286,3 +286,191 @@ function endDrag(e) {
 }
 window.addEventListener('mouseup', endDrag);
 window.addEventListener('touchend', endDrag);
+
+
+
+document.getElementById('qs-service').addEventListener('change', function () {
+    this.style.color = this.value ? 'var(--navy, #0d1f3c)' : '';
+  });
+
+  function qsHandleSubmit() {
+    const fields = [
+      { id: 'qs-name',    val: document.getElementById('qs-name').value.trim() },
+      { id: 'qs-email',   val: document.getElementById('qs-email').value.trim() },
+      { id: 'qs-service', val: document.getElementById('qs-service').value },
+      { id: 'qs-message', val: document.getElementById('qs-message').value.trim() },
+    ];
+
+    let valid = true;
+    fields.forEach(({ id, val }) => {
+      const el = document.getElementById(id);
+      if (!val) {
+        valid = false;
+        el.style.boxShadow = '0 0 0 3px rgba(255,80,80,0.55)';
+        setTimeout(() => el.style.boxShadow = '', 1600);
+      }
+    });
+    if (!valid) return;
+
+    // Success
+    const btn = document.querySelector('.qs-submit-btn');
+    document.getElementById('qs-success').style.display = 'block';
+    btn.textContent = 'Sent ✓';
+    btn.style.background = '#0a5a7a';
+
+    setTimeout(() => {
+      fields.forEach(({ id }) => document.getElementById(id).value = '');
+      document.getElementById('qs-service').style.color = '';
+      document.getElementById('qs-success').style.display = 'none';
+      btn.textContent = 'Send message';
+      btn.style.background = '';
+    }, 3000);
+  }
+
+
+
+
+//translation 
+
+ function clearGoogTransCookies() {
+    var hostname = window.location.hostname;
+    var expire = '; expires=Thu, 01 Jan 1970 00:00:00 UTC';
+    var domains = ['', hostname, '.' + hostname];
+    var parts = hostname.split('.');
+    while (parts.length > 2) {
+        parts.shift();
+        domains.push('.' + parts.join('.'));
+    }
+    var paths = ['/', window.location.pathname];
+    domains.forEach(function(domain) {
+        paths.forEach(function(path) {
+            var d = domain ? '; domain=' + domain : '';
+            document.cookie = 'googtrans=' + d + '; path=' + path + expire;
+        });
+    });
+}
+
+function getCurrentLanguage() {
+    var cookies = document.cookie.split(';');
+    for (var i = 0; i < cookies.length; i++) {
+        var c = cookies[i].trim();
+        if (c.indexOf('googtrans=') === 0) {
+            var parts = c.substring('googtrans='.length).split('/');
+            if (parts.length >= 3 && parts[2]) return parts[2];
+        }
+    }
+    return sessionStorage.getItem('selectedLanguage') || 'en'; // default = English
+}
+
+function setActiveLangUI(lang) {
+    document.querySelectorAll('.lang-option').forEach(function(el) {
+        el.classList.remove('active');
+        if (el.dataset.lang === lang) el.classList.add('active');
+    });
+}
+
+function updateSelectedFlag(lang) {
+    var matchedBtn = document.querySelector('.lang-option[data-lang="' + lang + '"]');
+    if (matchedBtn) {
+        var flagEl = document.getElementById('langSelectedFlag');
+        var labelEl = document.getElementById('langSelectedLabel');
+        if (flagEl) { flagEl.src = matchedBtn.dataset.flag; flagEl.alt = matchedBtn.dataset.label; }
+        if (labelEl) labelEl.textContent = matchedBtn.dataset.label;
+    }
+}
+
+function changeLang(lang) {
+    clearGoogTransCookies();
+
+    if (lang === 'en') {
+        // English is the original page — just reload clean
+        sessionStorage.removeItem('selectedLanguage');
+        window.location.href = window.location.pathname + window.location.search;
+        return;
+    }
+
+    var val = '/en/' + lang; // translate FROM English TO chosen language
+    var hostname = window.location.hostname;
+    document.cookie = 'googtrans=' + val + '; path=/;';
+    document.cookie = 'googtrans=' + val + '; domain=' + hostname + '; path=/;';
+    document.cookie = 'googtrans=' + val + '; domain=.' + hostname + '; path=/;';
+    sessionStorage.setItem('selectedLanguage', lang);
+
+    var selectEl = document.querySelector('.goog-te-combo');
+    if (selectEl) {
+        selectEl.value = lang;
+        selectEl.dispatchEvent(new Event('change'));
+        setActiveLangUI(lang);
+        updateSelectedFlag(lang);
+    } else {
+        window.location.href = window.location.pathname + window.location.search;
+    }
+}
+
+function toggleLangMenu(e) {
+    e.stopPropagation();
+    document.getElementById('langMenu').classList.toggle('open');
+}
+
+// This is called by Google's script automatically
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'en',          // ← your page is in English
+        includedLanguages: 'sq,it',  // ← translate TO Albanian and Italian
+        autoDisplay: false,          // ← stops toolbar appearing automatically
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+}
+
+// Hide Google's injected elements
+function removeGoogleJunk() {
+    var selectors = [
+        '.VIpgJd-ZVi9od-ORHb-OEVmcd',
+        '.VIpgJd-ZVi9od-aZ2me-OEVmcd',
+        '.goog-te-spinner-pos',
+        '.goog-te-spinner',
+        '#goog-gt-tt',
+        '.goog-tooltip',
+        '.goog-te-balloon-frame',
+        '.goog-te-banner-frame',
+    ];
+    selectors.forEach(function(sel) {
+        document.querySelectorAll(sel).forEach(function(el) { el.remove(); });
+    });
+    document.querySelectorAll('iframe.skiptranslate').forEach(function(el) {
+        el.style.cssText = 'display:none!important;height:0!important;width:0!important;';
+    });
+    // Fix body top shifting
+    document.body.style.top = '0px';
+}
+
+// Keep removing Google junk every 500ms
+setInterval(removeGoogleJunk, 500);
+window.addEventListener('load', removeGoogleJunk);
+
+// Single DOMContentLoaded
+document.addEventListener('DOMContentLoaded', function() {
+    var currentLang = getCurrentLanguage();
+    updateSelectedFlag(currentLang);
+    setActiveLangUI(currentLang);
+
+    // Button click handlers
+    document.querySelectorAll('.lang-option').forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            changeLang(this.dataset.lang);
+        });
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function() {
+        var menu = document.getElementById('langMenu');
+        if (menu) menu.classList.remove('open');
+    });
+
+    removeGoogleJunk();
+});
+
+// Expose to HTML onclick attributes
+window.changeLang = changeLang;
+window.toggleLangMenu = toggleLangMenu;

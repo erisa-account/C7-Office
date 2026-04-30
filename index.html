@@ -8,9 +8,6 @@
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,12 +18,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
 
     <!-- Template Stylesheet -->
     <link href="style.css" rel="stylesheet">
@@ -61,10 +53,52 @@
       <a href="#why" class="nav-link hidden">Elements</a>
       <a href="#footer" class="nav-link">Contact</a>
       <button class="text-gray-500 hover:text-cyan-500 transition"><i class="fa fa-magnifying-glass"></i></button>
-    </div>
+      
+      <div id="google_translate_element" style="display:none;"></div>
 
-    <!-- Purchase Now -->
-    <a href="#" class="hidden btn-cyan " style="padding:.5rem 1.2rem; font-size:.88rem;">Purchase Now</a>
+<!-- Language Dropdown -->
+<div class="hidden lang-dropdown" id="langMenu">
+    <button class="lang-selected" onclick="toggleLangMenu(event)">
+        <img id="langSelectedFlag" src="https://flagcdn.com/w40/gb.png" alt="English">
+        <span id="langSelectedLabel">English</span>
+        ▾
+    </button>
+    <ul class="lang-menu">
+        <li>
+            <button class="lang-option" data-lang="en" data-label="English" data-flag="https://flagcdn.com/w40/gb.png">
+                <img src="https://flagcdn.com/w40/gb.png" alt="English"> English
+            </button>
+        </li>
+        <li>
+            <button class="lang-option" data-lang="sq" data-label="Shqip" data-flag="https://flagcdn.com/w40/al.png">
+                <img src="https://flagcdn.com/w40/al.png" alt="Albanian"> Shqip
+            </button>
+        </li>
+        <li>
+            <button class="lang-option" data-lang="it" data-label="Italian" data-flag="https://flagcdn.com/w40/it.png">
+                <img src="https://flagcdn.com/w40/it.png" alt="Italian"> Italian
+            </button>
+        </li>
+    </ul>
+</div>
+
+<div class="lang-switcher flex items-center gap-3">
+
+    <button class="lang-option" data-lang="en" onclick="setLanguage('en')">
+        <img src="https://flagcdn.com/w40/gb.png" alt="English">
+    </button>
+
+    <button class="lang-option" data-lang="sq" onclick="setLanguage('sq')">
+        <img src="https://flagcdn.com/w40/al.png" alt="Shqip">
+    </button>
+
+    <button class="lang-option" data-lang="it" onclick="setLanguage('it')">
+        <img src="https://flagcdn.com/w40/it.png" alt="Italian">
+    </button>
+
+</div>
+
+    </div>
 
     <!-- Mobile Hamburger -->
     <button id="hamburger" class="lg:hidden text-xl text-gray-600" onclick="document.getElementById('mobileMenu').classList.toggle('open')">
@@ -91,7 +125,7 @@
   Creative &amp; Innovative<br>Digital Solution
 </h1>
    <div class="flex flex-wrap gap-4 justify-center">
-  <a href="#" class="btn-cyan btn-from-left" style="font-size:1rem; padding:.8rem 2.2rem;">Free Quote</a>
+  <a href="#" class="hidden btn-cyan btn-from-left" style="font-size:1rem; padding:.8rem 2.2rem;">Free Quote</a>
   <a href="#footer" class="btn-outline btn-from-right" style="font-size:1rem; padding:.8rem 2.2rem;">Contact Us</a>
 </div>
   </div>
@@ -171,12 +205,12 @@
       <div class="phone-box ">
         <div class="phone-icon"><i class="fa fa-phone"></i></div>
         <div>
-          <p class="text-black text-xl">Call to ask any question</p>
-          <a href="tel:+0123456789" class="text-2xl font-semibold" style="color:var(--cyan);">+355 069 44 87 722</a>
+          <p class="text-black text-xl">Do you have any question?</p>
+          <a href="tel:+0123456789" class="text-2xl font-semibold" style="color:var(--cyan);">info@c7integratedsystems.com</a>
         </div>
       </div>
       <div class="zoomIn">
-      <a href="#" class="btn-cyan mt-2 inline-block">Request A Quote</a>
+      <a href="#contact" class="btn-cyan mt-2 inline-block">Contact us</a>
       </div>
     </div>
     <!-- Image -->
@@ -381,7 +415,7 @@ Our team provides security monitoring, backups to keep your web projects fast, s
   </div>
 </section>
 
-<section id="testimonial" class="py-20 px-6 bg-white mb-20">
+<section  id="testimonial" class="hidden py-20 px-6 bg-white mb-20">
 <div class="ts-section">
   <div class="ts-header">
     <p class=" wp-label">Testimonial</p>
@@ -444,6 +478,76 @@ Our team provides security monitoring, backups to keep your web projects fast, s
 </div>
 </section>
     
+
+<section id="contact" class="py-20 px-6">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+    <!-- LEFT -->
+    <div>
+      <p class="font-extrabold tracking-widest wp-label mb-2" style="color:var(--cyan);">Let's Work Together</p>
+      <h2 class="text-3xl md:text-5xl font-extrabold leading-tight mb-4" style="color:var(--navy);">
+        We'd love to hear about your project or idea
+      </h2>
+      <div class="section-divider mb-6">
+        <span class="bar-long"><span class="bar-square"></span></span>
+      </div>
+
+      <div class="qs-perks mb-4">
+        <div class="qs-perk">
+          <svg class="qs-perk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 14 4 9 9 4"/><path d="M20 20v-7a4 4 0 0 0-4-4H4"/>
+          </svg>
+          Reply within 24 hours
+        </div>
+        <div class="qs-perk">
+          <svg class="qs-perk-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.69 19a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 3.09 4.18 2 2 0 0 1 5.09 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L9.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          24 hrs telephone support
+        </div>
+      </div>
+
+      <p class="text-gray-500 leading-relaxed mb-6">
+        Whether you have a project in mind, want to collaborate, or just need guidance, our team is here to help. 
+        Reach out and let's create something impactful together.
+      </p>
+
+      <div class="phone-box ">
+        <div class="phone-icon"><i class="fa fa-phone"></i></div>
+        <div>
+          <p class="text-black text-xl">Call to ask any question</p>
+          <a href="tel:+355069448722" class="text-2xl font-semibold" style="color:var(--cyan);">+355 069 44 87 722</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT — FORM -->
+    <div class="qs-form-card">
+      <div class="qs-field">
+        <input type="text" id="qs-name" placeholder="Your Name" autocomplete="name" />
+      </div>
+      <div class="qs-field">
+        <input type="email" id="qs-email" placeholder="Your Email" autocomplete="email" />
+      </div>
+      <div class="qs-field">
+        <select id="qs-service">
+          <option value="" disabled selected>Select A Service</option>
+          <option value="web">Web Design</option>
+          <option value="seo">SEO Optimization</option>
+          <option value="branding">Web maintenance</option>
+          <option value="consulting">Consulting</option>
+        </select>
+      </div>
+      <div class="qs-field">
+        <textarea id="qs-message" placeholder="Message"></textarea>
+      </div>
+      <button class="qs-submit-btn" onclick="qsHandleSubmit()">Send message</button>
+      <div class="qs-success" id="qs-success">✓ Thanks! We'll get back to you within 24 hours.</div>
+    </div>
+
+  </div>
+</section>
+
 <!-- ====== FOOTER ====== -->
 <footer id="footer">
   <div class="grid grid-cols-1 lg:grid-cols-4">
@@ -457,7 +561,7 @@ Our team provides security monitoring, backups to keep your web projects fast, s
 </p>
       <div class="flex gap-2">
         <input type="email" placeholder="Your Email" class="flex-1 px-4 py-3 text-gray-800 text-sm rounded-l-none rounded outline-none"/>
-        <button class="px-5 py-3 font-bold text-white text-sm" style="background:var(--navy);">Sign Up</button>
+        <button class="hidden px-5 py-3 font-bold text-white text-sm" style="background:var(--navy);">Sign Up</button>
       </div>
     </div>
 
@@ -477,13 +581,7 @@ Our team provides security monitoring, backups to keep your web projects fast, s
         <div class="flex flex-col gap-3 text-sm" style="color:#a0b4cc;">
           <div class="flex items-start gap-3"><i class="fa fa-location-dot mt-0.5" style="color:var(--cyan);"></i><span>Ndre Mjeda Street, Tirana</span></div>
           <div class="flex items-start gap-3"><i class="fa fa-envelope mt-0.5" style="color:var(--cyan);"></i><span>info@c7integratedsystems.com</span></div>
-          <div class="flex items-start gap-3"><i class="fa fa-phone mt-0.5" style="color:var(--cyan);"></i><span>+355 069 44 87 722</span></div>
-        </div>
-        <div class="flex gap-2 mt-5">
-          <a href="#" class="w-9 h-9 rounded flex items-center justify-center text-white text-sm transition hover:opacity-80" style="background:var(--cyan);"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="w-9 h-9 rounded flex items-center justify-center text-white text-sm transition hover:opacity-80" style="background:var(--cyan);"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="w-9 h-9 rounded flex items-center justify-center text-white text-sm transition hover:opacity-80" style="background:var(--cyan);"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" class="w-9 h-9 rounded flex items-center justify-center text-white text-sm transition hover:opacity-80" style="background:var(--cyan);"><i class="fab fa-instagram"></i></a>
+          <div class="hidden flex items-start gap-3"><i class="fa fa-phone mt-0.5" style="color:var(--cyan);"></i><span>+355 069 44 87 722</span></div>
         </div>
       </div>
 
@@ -495,7 +593,7 @@ Our team provides security monitoring, backups to keep your web projects fast, s
     <span class="bar-square"></span>
   </span>
 </div>
-        <ul class="flex flex-col gap-2 text-sm" style="color:#a0b4cc;">
+        <ul class="hidden flex flex-col gap-2 text-sm" style="color:#a0b4cc;">
           <li><a href="#" class="hover:text-white flex items-center gap-2 transition"><i class="fa fa-arrow-right text-xs" style="color:var(--cyan);"></i>Home</a></li>
           <li><a href="#about" class="hover:text-white flex items-center gap-2 transition"><i class="fa fa-arrow-right text-xs" style="color:var(--cyan);"></i>About Us</a></li>
           <li><a href="#services" class="hover:text-white flex items-center gap-2 transition"><i class="fa fa-arrow-right text-xs" style="color:var(--cyan);"></i>Our Services</a></li>
@@ -503,6 +601,25 @@ Our team provides security monitoring, backups to keep your web projects fast, s
           <li><a href="#" class="hidden hover:text-white flex items-center gap-2 transition"><i class="fa fa-arrow-right text-xs" style="color:var(--cyan);"></i>Latest Blog</a></li>
           <li><a href="#footer" class="hover:text-white flex items-center gap-2 transition"><i class="fa fa-arrow-right text-xs" style="color:var(--cyan);"></i>Contact Us</a></li>
         </ul>
+
+        <div class="flex flex-col gap-2 mt-5">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="hidden flex items-center gap-2 hover:opacity-80">
+    <span class="w-9 h-9 rounded flex items-center justify-center text-white text-sm" style="background:var(--cyan);"><i class="fab fa-twitter"></i></span>
+    <span class="text-sm" style="color:#a0b4cc;">Twitter</span>
+  </a>
+ <a href="https://www.facebook.com/ShqiptarjaCom/?locale=sq_AL" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:opacity-80">
+    <span class="w-9 h-9 rounded flex items-center justify-center text-white text-sm" style="background:var(--cyan);"><i class="fab fa-facebook-f"></i></span>
+    <span class="text-sm" style="color:#a0b4cc;">Facebook</span>
+  </a>
+  <a href="https://al.linkedin.com/company/c7ics" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:opacity-80">
+    <span class="w-9 h-9 rounded flex items-center justify-center text-white text-sm" style="background:var(--cyan);"><i class="fab fa-linkedin-in"></i></span>
+    <span class="text-sm" style="color:#a0b4cc;">LinkedIn</span>
+  </a>
+  <a href="https://www.instagram.com/shqiptarjacom/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:opacity-80">
+    <span class="w-9 h-9 rounded flex items-center justify-center text-white text-sm" style="background:var(--cyan);"><i class="fab fa-instagram"></i></span>
+    <span class="text-sm" style="color:#a0b4cc;">Instagram</span>
+  </a>
+        </div>
       </div>
 
       <!-- Popular Links -->
@@ -517,7 +634,7 @@ Our team provides security monitoring, backups to keep your web projects fast, s
           <li><a href="#" class="hover:text-white flex items-center gap-2 transition"><i class="fa fa-arrow-right text-xs" style="color:var(--cyan);"></i>Home</a></li>
           <li><a href="#about" class="hover:text-white flex items-center gap-2 transition"><i class="fa fa-arrow-right text-xs" style="color:var(--cyan);"></i>About Us</a></li>
           <li><a href="#services" class="hover:text-white flex items-center gap-2 transition"><i class="fa fa-arrow-right text-xs" style="color:var(--cyan);"></i>Our Services</a></li>
-          <li><a href="#" class="hover:text-white flex items-center gap-2 transition"><i class="fa fa-arrow-right text-xs" style="color:var(--cyan);"></i>Testimonial</a></li>
+          <li><a href="#" class="hidden hover:text-white flex items-center gap-2 transition"><i class="fa fa-arrow-right text-xs" style="color:var(--cyan);"></i>Testimonial</a></li>
           <li><a href="#" class="hidden hover:text-white flex items-center gap-2 transition"><i class="fa fa-arrow-right text-xs" style="color:var(--cyan);"></i>Latest Blog</a></li>
           <li><a href="#footer" class="hover:text-white flex items-center gap-2 transition"><i class="fa fa-arrow-right text-xs" style="color:var(--cyan);"></i>Contact Us</a></li>
         </ul>
@@ -537,6 +654,8 @@ Our team provides security monitoring, backups to keep your web projects fast, s
   <i class="fa fa-arrow-up"></i>
 </div>
 
+<script async src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <script src="home.js"></script>
+
 </body>
 </html>
