@@ -31,7 +31,7 @@ The website:
 <img width="1917" height="873" alt="Screenshot 2026-04-20 141705" src="https://github.com/user-attachments/assets/972e6786-131f-47ad-802a-246b0f5ddf8e" />
 
 
-<img width="1919" height="869" alt="Screenshot 2026-04-20 141725" src="https://github.com/user-attachments/assets/da398dcd-439b-45be-aee6-249c40cffe68" />
+
 
 
 
